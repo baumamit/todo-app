@@ -1,6 +1,44 @@
+## Prerequisites
+
+Before starting, please ensure that you have Node.js and npm installed on your system.
+
+1. **Check Node.js version**: You need Node.js installed (v12 or higher is recommended). You can check the installed version by running the following command:
+
+   ```bash
+   node -v
+   ```
+
+2. **Check npm version**: You also need npm to install the required dependencies. Check the installed version of npm by running:
+   ```bash
+   npm -v
+   ```
+
+If Node.js or npm is not installed, the tests may not run as expected.
+
+## Installation
+
+Once you have verified Node.js and npm are installed, follow these steps to set up the project:
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/arashn2y/todo-app.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd todo-app
+   ```
+
+3. Install the required dependencies by running:
+   ```bash
+   npm install
+   ```
+
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), [TypeScript](https://www.typescriptlang.org/) and [Tailwind CSS](https://tailwindcss.com/).
 
 ## Available Scripts
 
@@ -28,16 +66,6 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
 ## Learn More
 
