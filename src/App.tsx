@@ -1,19 +1,14 @@
-import {Header} from "./components/Header";
-import {Input} from "./components/Input";
-import {Button} from "./components/Button";
-import { CreateTodoSection } from "./components/CreateTodoSection";
+import {Header} from "./components/sections/Header";
+import { CreateTodoSection } from "./components/sections/CreateTodoSection";
 
 function App() {
-  const greeting = () => {
-    console.log("Hello gorgeous!");
-  }
   return (
-    <>
-      <Header title="Todo app" link="https://delikaktus.com/" />
-      <div className="flex flex-col gap-3 justify-center items-center h-[calc(100vh-158px) w-60] border-black">
+    <div className="grid grid-rows-22 gap-4 justify-center">
+      <Header title="Todo app" link="https://delikaktus.com/" styleHeader="" />
+      <div className="flex flex-col gap-3 justify-center items-center row-span-11 w-60 border-black">
         <CreateTodoSection />
       </div>
-    </>
+    </div>
   );
 }
 
