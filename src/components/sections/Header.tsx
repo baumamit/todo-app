@@ -1,7 +1,10 @@
-import Navbar from "./Navbar";
+import Navbar from "../custom/Navbar";
 
 interface HeaderProps {
   title: string;
+  heabarClassName?: string;
+  h1ClassName?: string;
+  navClassName?: string;
 }
 
 function Header(props: HeaderProps) {
