@@ -1,17 +1,19 @@
-import { RxDashboard as Dashboard } from "react-icons/rx";
-import { TbLogin2 as Login } from "react-icons/tb";
-import { FaWhatsapp as Whatsapp } from "react-icons/fa";
+import {Header} from "./components/Header";
+import {Input} from "./components/Input";
+import {Button} from "./components/Button";
+import { CreateTodoSection } from "./components/CreateTodoSection";
 
 function App() {
+  const greeting = () => {
+    console.log("Hello gorgeous!");
+  }
   return (
-    <header className="flex justify-between items-center py-8 text-4xl text-gray-600 border-b-2 shadow-xl">
-      <div className="flex-grow text-center">Todo App</div>
-      <nav className="absolute right-10 flex gap-10">
-        <Dashboard className="cursor-pointer" />
-        <Login className="cursor-pointer" />
-        <Whatsapp className="cursor-pointer text-[#128c7e]" />
-      </nav>
-    </header>
+    <>
+      <Header title="Todo app" link="https://delikaktus.com/" />
+      <div className="flex flex-col gap-3 justify-center items-center h-[calc(100vh-158px) w-60] border-black">
+        <CreateTodoSection />
+      </div>
+    </>
   );
 }
 
