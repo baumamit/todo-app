@@ -16,7 +16,7 @@ export function Input(props: InputProps) {
     return (
         <div className={"flex flex-row items-end " + styleDiv}>
             <Label text={labelText} htmlForID={id} styleLabel={styleLabel} />
-            <input id={id} type={type} placeholder={placeHolder} className={".placeholder-text-black w-60 " + styleInput} />
+            <input id={id} type={type} placeholder={placeHolder} className={".placeholder-text-black w-auto " + styleInput} />
         </div>
 
     )
