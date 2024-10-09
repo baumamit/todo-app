@@ -8,9 +8,9 @@ import Button from "./components/custom/Button";
 
 function App() {
   return (
-    <>
+    <div className="grid grid-rows-12 h-screen">
       <Header title="Dashboard" />
-      <main className="flex flex-col gap-6 justify-center items-center">
+      <main className="flex flex-col gap-6 justify-center items-center row-span-11">
         <h1 className="text-4xl">Simple Todo List</h1>
         <div className="flex flex-col gap-3 justify-center items-center">
           <div className="flex flex-col gap-2 items-start w-96 justify-between">
@@ -28,7 +28,7 @@ function App() {
         </div>
         <Button title="Add Todo" className="w-96" />
       </main>
-    </>
+    </div>
   );
 }
 
