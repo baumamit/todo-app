@@ -52,7 +52,7 @@ const TodoList = (props: Props) => {
         <Label title="Order by" />
         <Select name="order-select" id="order-select" className="w-full" options={["Expire date", "Priority"]} />
       </div>
-      <div className="w-full mt-8 flex flex-col space-y-4">
+      <div className="w-full mt-8 flex flex-col space-y-7">
         {todoArray.map(todo => {
           return <TodoItem key={todo.id} {...todo} />;
         })}

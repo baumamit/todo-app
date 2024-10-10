@@ -19,19 +19,17 @@ const TodoItem = (props: Todo) => {
   const { title, expireDate, priority } = props;
 
   return (
-    <div className="shadow flex flex-row p-6 border-2 rounded-xl w-full">
+    <div className="relative shadow flex flex-row p-6 border-2 rounded-xl w-full">
       <Checkbox />
       <div className="ml-3 grow flex flex-col items-start justify-start">
         <h1 className="font-bold text-xl">{title}</h1>
         <div className="text-gray-500">{expireDate.toLocaleDateString()}</div>
       </div>
-      <div>
-        <div className="flex flex-row">
-          <IoTrashBinOutline color="red" size={22} />
-          <FaPencilAlt className="ml-2" color="gray" size={20} />
-        </div>
+      <div className="flex flex-row">
+        <IoTrashBinOutline color="red" size={22} />
+        <FaPencilAlt className="ml-2" color="gray" size={20} />
       </div>
-      <div className={"absolute w-16 py-1 px-2 mt-2 text-sm rounded-lg text-center " + getPillBackground(priority)}>{priority}</div>
+      <div className={"absolute -top-4 -right-2 py-1 px-2 text-sm rounded-lg text-center " + getPillBackground(priority)}>{priority}</div>
     </div>
   );
 };
