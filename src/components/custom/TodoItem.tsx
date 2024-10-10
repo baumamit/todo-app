@@ -1,8 +1,8 @@
 import Todo from "../../types/todo";
 import Priority from "../../types/priorityEnum";
-import { MdCheckBoxOutlineBlank } from "react-icons/md";
 import { IoTrashBinOutline } from "react-icons/io5";
 import { FaPencilAlt } from "react-icons/fa";
+import Checkbox from "./Checkbox";
 
 const getPillBackground = (priority: Priority): string => {
   switch (priority) {
@@ -20,11 +20,9 @@ const TodoItem = (props: Todo) => {
 
   return (
     <div className="shadow flex flex-row p-6 border-2 rounded-xl w-full">
-      <div className="w-[20%]">
-        <MdCheckBoxOutlineBlank size={25} />
-      </div>
-      <div className="grow">
-        <div>{title}</div>
+      <Checkbox />
+      <div className="ml-3 grow flex flex-col items-start justify-start">
+        <h1 className="font-bold text-xl">{title}</h1>
         <div className="text-gray-500">{expireDate.toLocaleDateString()}</div>
       </div>
       <div>
@@ -32,8 +30,8 @@ const TodoItem = (props: Todo) => {
           <IoTrashBinOutline color="red" size={22} />
           <FaPencilAlt className="ml-2" color="gray" size={20} />
         </div>
-        <div className={"w-16 py-1 px-2 mt-2 text-sm rounded-lg text-center " + getPillBackground(priority)}>{priority}</div>
       </div>
+      <div className={"absolute w-16 py-1 px-2 mt-2 text-sm rounded-lg text-center " + getPillBackground(priority)}>{priority}</div>
     </div>
   );
 };

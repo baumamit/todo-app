@@ -11,6 +11,7 @@ interface Props {
 const TodoList = (props: Props) => {
   const todoArray: Todo[] = [
     {
+      id: 1,
       title: "Play with React",
       priority: Priority.HIGH,
       expireDate: new Date("2025-01-02"),
@@ -18,6 +19,7 @@ const TodoList = (props: Props) => {
       done: false
     },
     {
+      id: 2,
       title: "Play with React",
       priority: Priority.LOW,
       expireDate: new Date("2025-01-02"),
@@ -25,6 +27,7 @@ const TodoList = (props: Props) => {
       done: false
     },
     {
+      id: 3,
       title: "Play with React",
       priority: Priority.MEDIUM,
       expireDate: new Date("2025-01-02"),
@@ -32,6 +35,7 @@ const TodoList = (props: Props) => {
       done: false
     },
     {
+      id: 4,
       title: "Play with React",
       priority: Priority.LOW,
       expireDate: new Date("2025-01-02"),
@@ -50,7 +54,7 @@ const TodoList = (props: Props) => {
       </div>
       <div className="w-full mt-8 flex flex-col space-y-4">
         {todoArray.map(todo => {
-          return <TodoItem {...todo} />;
+          return <TodoItem key={todo.id} {...todo} />;
         })}
       </div>
     </div>
