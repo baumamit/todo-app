@@ -1,50 +1,15 @@
 import Todo from "../../types/todo";
-import Priority from "../../types/priorityEnum";
 import Select from "../custom/Select";
 import TodoItem from "../custom/TodoItem";
 import Label from "../custom/Label";
 
-interface Props {
+interface TodoListProps {
   className?: string;
+  todoArray: Todo[];
 }
 
-const TodoList = (props: Props) => {
-  const todoArray: Todo[] = [
-    {
-      id: 1,
-      title: "Play with React",
-      priority: Priority.HIGH,
-      expireDate: new Date("2025-01-02"),
-      creationDate: new Date(),
-      done: false
-    },
-    {
-      id: 2,
-      title: "Play with React",
-      priority: Priority.LOW,
-      expireDate: new Date("2025-01-02"),
-      creationDate: new Date(),
-      done: false
-    },
-    {
-      id: 3,
-      title: "Play with React",
-      priority: Priority.MEDIUM,
-      expireDate: new Date("2025-01-02"),
-      creationDate: new Date(),
-      done: false
-    },
-    {
-      id: 4,
-      title: "Play with React",
-      priority: Priority.LOW,
-      expireDate: new Date("2025-01-02"),
-      creationDate: new Date(),
-      done: false
-    }
-  ];
-
-  const { className } = props;
+const TodoList = (props: TodoListProps) => {
+  const { className, todoArray } = props;
 
   return (
     <div className={"h-full text-center w-96 " + className}>

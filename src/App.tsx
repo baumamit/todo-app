@@ -9,7 +9,7 @@ function App() {
       <h1 className="text-4xl text-center mt-3">Simple Todo List</h1>
       <main className="row-span-10 flex justify-between items-start w-4/6 mx-auto relative">
         <CreateTodoSection />
-        <TodoList />
+        <TodoList todoArray={[]} />
       </main>
     </div>
   );
