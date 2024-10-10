@@ -8,9 +8,10 @@ import Button from "../custom/Button";
 
 const CreateTodoSection = () => {
   const [value, setValue] = useState<string>("");
-  const addNumber = () => {
+  const [date, setDate] = useState<Date>(new Date());
+  const showValues = () => {
     console.log(value);
-    // console.log(date);
+    console.log(date);
   };
 
   return (
@@ -25,10 +26,9 @@ const CreateTodoSection = () => {
       </div>
       <div className="flex flex-col gap-2 items-start w-96 justify-between">
         <Label title="Data" />
-        <DatePicker className="w-full" />
+        <DatePicker className="w-full" value={date} setValue={setDate} />
       </div>
-      <Button title="Add number" className="w-96" onClick={addNumber} />
-      {1}
+      <Button title="Add number" className="w-96" onClick={showValues} />
     </div>
   );
 };
