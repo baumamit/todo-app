@@ -1,15 +1,13 @@
 import CreateTodoSection from "./components/sections/CreateTodoSection";
 import Header from "./components/sections/Header";
-import TodoList  from "./components/sections/TodoList";
+import TodoList from "./components/sections/TodoList";
 
 function App() {
   return (
-    <div className="grid grid-rows-12">
+    <div className="grid grid-rows-12 h-screen">
       <Header title="Dashboard" />
-      <div className="text-center pt-4">
-          <h1 className="text-4xl">Simple Todo List</h1>
-        </div>
-      <main className="flex flex-col  items-center row-span-8">
+      <h1 className="text-4xl text-center mt-3">Simple Todo List</h1>
+      <main className="row-span-10 flex justify-between items-start w-4/6 mx-auto relative">
         <CreateTodoSection />
         <TodoList />
       </main>

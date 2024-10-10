@@ -16,9 +16,9 @@ function Navbar(props: NavbarProps) {
   }
   return (
     <nav className="absolute right-10 flex gap-10">
-      <Dashboard className="cursor-pointer hover:text-gray-900" onClick={() => clickHandler(firstLink)} />
-      <Login className="cursor-pointer hover:text-gray-900" onClick={() => clickHandler(secondLink)} />
-      <Whatsapp className="cursor-pointer text-[#128c7e] hover:text-gray-900" onClick={() => clickHandler(thirdLink)} />
+      <Dashboard className="cursor-pointer hover:text-gray-900 text-3xl" onClick={() => clickHandler(firstLink)} />
+      <Login className="cursor-pointer hover:text-gray-900 text-3xl" onClick={() => clickHandler(secondLink)} />
+      <Whatsapp className="cursor-pointer text-[#128c7e] hover:text-gray-900 text-3xl" onClick={() => clickHandler(thirdLink)} />
     </nav>
   );
 }
