@@ -1,10 +1,9 @@
-import Priority from "./priorityEnum";
+import {Priority} from "./priorityEnum";
 
 /*
  * Represents a TODO in this application
  */
 interface Todo {
-  id: number;
   title: string;
   expireDate: Date;
   done: boolean;

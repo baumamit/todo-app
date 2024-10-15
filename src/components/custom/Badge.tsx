@@ -1,4 +1,4 @@
-import Priority from "../../types/priorityEnum";
+import {Priority} from "../../types/priorityEnum";
 
 interface BadgeProps {
   priority: Priority;
